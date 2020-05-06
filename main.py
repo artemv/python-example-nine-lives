@@ -105,11 +105,12 @@ while continue_game:
     is_guessed = False
     attempt = ''
 
-    secret_word = random.choice(words)
-    secret_word_length = len(secret_word)
-    number_of_unknown_letters = secret_word_length
-    clue = ["?"] * secret_word_length
-    print(clue)
+    if lives > 0:
+        secret_word = random.choice(words)
+        secret_word_length = len(secret_word)
+        number_of_unknown_letters = secret_word_length
+        clue = ["?"] * secret_word_length
+        print(clue)
 
     while lives > 0 and not is_guessed:
 
